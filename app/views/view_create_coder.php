@@ -129,7 +129,7 @@
                                     </select>
                                 </div>
                                 <div class="relative mb-6" data-te-select-init>
-                                    <label class="font-medium">Genero</label>
+                                    <label class="font-medium">Género</label>
                                     <select <?=$edit? '' : 'disabled'?> name="genero" class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                         />
                                         <option <?= $coder && $coder['genero']== 0? 'selected':''?> value="0"></option>

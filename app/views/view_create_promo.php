@@ -66,7 +66,7 @@
                             <div class="grid grid-cols-2 gap-4">
                                                         
                                 <div class="relative mb-6" data-te-input-wrapper-init>
-                                    <label class="font-medium">Nombre de la promocion</label>
+                                    <label class="font-medium">Nombre del bootcamp</label>
                                     <input <?=$edit? '' : 'disabled'?>
                                     class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                      type="text" name="nombre_promo" value=<?= $promo? $promo['nombre_promo']:""?>>    
@@ -88,7 +88,7 @@
                                     type="date" name="fecha_inicio" value=<?= $promo? $promo['fecha_inicio']:""?>>    
                                 </div>
                                <div class="relative mb-6" data-te-input-wrapper-init>
-                                    <label class="font-medium">Fecha de finalizacion</label>
+                                    <label class="font-medium">Fecha de finalización</label>
                                     <input <?=$edit? '' : 'disabled'?>                                     
                                     class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                     type="date" name="fecha_fin" value=<?= $promo? $promo['fecha_fin']:""?>>    
