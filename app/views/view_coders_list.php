@@ -39,7 +39,7 @@
                     <img src="/proyectos/CoderFlow/src/assets/logo.png" alt="logo"/></a>
                 <a class="text-lg font-medium flex items-center justify-center flex-shrink-0 mt-7 rounded hover:bg-gray-300" href="/proyectos/coderflow/public/promos">
                     BOOTCAMPS</a>
-                <a class=" text-lg font-medium flex items-center justify-center flex-shrink-0 mt-7 rounded hover:bg-gray-300" href="#">
+                <a class=" text-lg font-medium flex items-center justify-center flex-shrink-0 mt-7 rounded hover:bg-gray-300" href="/proyectos/coderflow/public/coders">
                     CODERS</a>
             </div>
             
@@ -60,7 +60,7 @@
                                     <th>Apellido</th>
                                     <th>Localidad</th>
                                     <th>Status</th>
-                                    <th></th>
+                                    <th>Ver</th>
                                 </tr>
                             </thead>
 
@@ -72,8 +72,7 @@
                                     <td><?= $result["apellidos"]?></td>
                                     <td><?= $result["localidad"]?></td>
                                     <td><?= $result["estado"]?></td>
-                                    <td><a href="/proyectos/coderflow/public/coders/show/<?=$result["identificador"]?>"><button class="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-200 rounded hover:bg-gray-300">
-                        Detalles</button></a></td> 
+                                    <td><a href="/proyectos/coderflow/public/coders/show/<?=$result["identificador"]?>"><button class="flex items-center justify-center bg-gray-200 w-6 p-1 rounded hover:bg-gray-300"><img src="/proyectos/CoderFlow/src/assets/icons8-view-60.png"/></button></a></td>
                                 </tr>
 
                             <?php endforeach;?>
