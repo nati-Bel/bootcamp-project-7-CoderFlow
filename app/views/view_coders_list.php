@@ -47,7 +47,7 @@
 
                 <div class="flex items-center justify-between flex-shrink-0 h-16 px-8 border-b border-gray-300">
                     <h1 class="text-lg font-medium">Lista de Coders<?= $promo? ' ' .$promo['nombre_promo'] : '' ?></h1>
-                    <a href="/proyectos/coderflow/public/coders/create"> <button class="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-200 rounded hover:bg-gray-300">
+                    <a href="/proyectos/coderflow/public/coders/create"> <button class="flex items-center justify-center h-10 px-4 ml-2 text-sm text-white font-medium rounded bg-[#EA5729] hover:bg-white hover:text-[#EA5729] hover:border-[#EA5729] hover:border-2">
                         + Nuevo Coder</button></a>
                 </div>
 
