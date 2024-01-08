@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/proyectos/CoderFlow/public/css/create_coder.css" rel="stylesheet">
-    <link href="/proyectos/CoderFlow/public/css/folder_panel_1.css" rel="stylesheet">
-    <link href="/proyectos/CoderFlow/public/css/coders_list.css" rel="stylesheet">
-    <title>Lista de Coders</title>
-</head>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+        rel="stylesheet" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+        <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+        <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            fontFamily: {
+                sans: ["Roboto", "sans-serif"],
+                body: ["Roboto", "sans-serif"],
+                mono: ["ui-monospace", "monospace"],
+            },
+            },
+            corePlugins: {
+            preflight: false,
+            },
+        };
+        </script>
+        
+        <title>Lista de Coders</title>
+    </head>
 
-<header>
-    <nav>
-        <div class="nav_container">
-        <div class="nav_tab nav_tab_1"></div>
-        <div class="nav_tab nav_tab_2"></div>
-        <div class="nav_tab nav_tab_3">Información de Coder</div>
-            </div> 
-        </div>
-    </nav>
+    <body>
 
-</header>
-<body>
-    <section class="body_container">
-        <section class="input_container">
-            <a href="/proyectos/coderflow/public/coders/create"><button class="btn_cr_1">Crear coder</button></a>
-            <a href="/proyectos/coderflow/public/promos"><button class="btn_cr_2">Ver bootcamps</button></a>
+        <div class="flex w-screen h-screen text-gray-700">
 
-            <h2 class="h2">Lista de Coders<?= $promo? ' ' .$promo['nombre_promo'] : '' ?></h2>
-                
-            <div class="list">
-                <ul class="ul">
-                    <?php foreach($results as $result): ?>
-                        
-                    <div class ="li_container">
-                        <li class ="li">
-                            <span class="name"><?= $result["nombre"]?></span>
-                            <span class="surname"><?= $result["apellidos"]?></span>
-                            <span class="city"><?= $result["localidad"]?></span>
-                            <span class="status"><?= $result["estado"]?></span>
-                            <span class="btn_list"><a href="/proyectos/coderflow/public/coders/show/<?=$result["identificador"]?>">
-                            <button class="btn_cr_1">Ver Coder</button></a></span>
-                            
-                        </li>
-                    </div>
-                    <?php endforeach;?>
-                </ul>
+            <div class="flex flex-col items-right w-26 pb-4 overflow-auto border-r border-gray-300">
+                <a class="flex items-center justify-center flex-shrink-0 w-full h-16 p-4 mt-5" href="#">
+                    <img src="/proyectos/CoderFlow/src/assets/logo.png" alt="logo"/></a>
+                <a class="text-lg font-medium flex items-center justify-center flex-shrink-0 mt-7 rounded hover:bg-gray-300" href="/proyectos/coderflow/public/promos">
+                    BOOTCAMPS</a>
+                <a class=" text-lg font-medium flex items-center justify-center flex-shrink-0 mt-7 rounded hover:bg-gray-300" href="#">
+                    CODERS</a>
             </div>
-        </section>
-    </section>
             
+            <div class="flex flex-col flex-grow">
 
-</body>
+                <div class="flex items-center justify-between flex-shrink-0 h-16 px-8 border-b border-gray-300">
+                    <h1 class="text-lg font-medium">Lista de Coders<?= $promo? ' ' .$promo['nombre_promo'] : '' ?></h1>
+                    <a href="/proyectos/coderflow/public/coders/create"> <button class="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-200 rounded hover:bg-gray-300">
+                        + Nuevo Coder</button></a>
+                </div>
+
+                <div class="flex-grow p-6 overflow-auto bg-gray-200">
+                    <div data-te-datatable-init>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Localidad</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            <?php foreach($results as $result): ?>
+
+                                <tr>
+                                    <td><?= $result["nombre"]?></td>
+                                    <td><?= $result["apellidos"]?></td>
+                                    <td><?= $result["localidad"]?></td>
+                                    <td><?= $result["estado"]?></td>
+                                    <td><a href="/proyectos/coderflow/public/coders/show/<?=$result["identificador"]?>"><button class="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-200 rounded hover:bg-gray-300">
+                        Detalles</button></a></td> 
+                                </tr>
+
+                            <?php endforeach;?>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js">
+            // TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com 
+        // Initialization for ES Users
+        import {
+        Datatable,
+        initTE,
+        } from "tw-elements";
+
+        initTE({ Datatable });
+        </script>
+    </body>
 </html>
