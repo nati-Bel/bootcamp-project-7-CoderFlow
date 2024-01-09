@@ -42,7 +42,6 @@
             </div>
             
             <div class="flex flex-col flex-grow">
-
                 <div class="flex items-center justify-between flex-shrink-0 h-16 px-8 border-b border-gray-300">
                     <h1 class="text-lg font-medium">Ficha Bootcamp</h1>
 
@@ -51,27 +50,25 @@
                             <a href="/proyectos/coderflow/public/promos/edit/<?=$promo['identificador']?>" >           
                                 <button class="flex items-center justify-center h-10 px-4 ml-2 text-sm text-white font-medium bg-[#EA5729] rounded hover:bg-white hover:text-[#EA5729] hover:border-[#EA5729] hover:border-2">Modificar</button>
                             </a>
-                            
                             <a href="/proyectos/coderflow/public/promos/delete/<?=$promo['identificador']?>" >
                                 <button class="flex items-center justify-center h-10 px-4 ml-2 text-sm text-white font-medium bg-[#EA5729] rounded hover:bg-white hover:text-[#EA5729] hover:border-[#EA5729] hover:border-2">Eliminar</button>
                             </a>
                         </div>
                     <?php endif; ?>
-                    
+
                 </div>
 
                 <div class="flex-grow p-4 overflow-auto bg-gray-200">
                     <div class="block w-4/5 rounded-lg bg-white p-4 m-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                         <form action="/proyectos/coderflow/public/promos<?= $promo? '/update/'.$promo['identificador']:'/create' ?>" method="POST">
-                            <div class="grid grid-cols-2 gap-4">
-                                                        
+                            
+                            <div class="grid grid-cols-2 gap-4">                                                        
                                 <div class="relative mb-6" data-te-input-wrapper-init>
                                     <label class="font-medium">Nombre del bootcamp</label>
                                     <input <?=$edit? '' : 'disabled'?>
                                     class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                      type="text" name="nombre_promo" value=<?= $promo? $promo['nombre_promo']:""?>>    
-                                </div>
-                                
+                                </div>                            
                                 <div class="relative mb-6" data-te-input-wrapper-init>
                                     <label class="font-medium">Stack</label>
                                     <input <?=$edit? '' : 'disabled'?> 
@@ -93,8 +90,8 @@
                                     class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                     type="date" name="fecha_fin" value=<?= $promo? $promo['fecha_fin']:""?>>    
                                 </div>
+                            </div>
 
-                            </div>    
                            <div class="grid grid-cols-2 gap-4">
                                 <div class="relative mb-6" data-te-input-wrapper-init>
                                     <label class="font-medium">Formador@</label>
@@ -115,10 +112,8 @@
                                     <input <?=$edit? '' : 'disabled'?> 
                                     class="peer block min-h-[auto] w-full rounded-lg border-2 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none focus:placeholder:opacity-100 focus:border-[#EA5729]"
                                     type="text" name="rp" class="input_form" value=<?= $promo? $promo['rp']:""?>>    
-                                </div>
-                               
-                            </div>        
-                            
+                                </div>                            
+                            </div>     
 
                             <?php if($promo && $edit):?>
                                 <button
@@ -137,21 +132,22 @@
                                 GUARDAR
                                 </button>
                             <?php endif; ?>
+
                         </form>
                     </div>                    
                 </div>
             </div>
         </div>
                 
-<script>
-    import {
-  Ripple,
-  Input, Select,
-  initTE,
-} from "tw-elements";
+    <script>
+        import {
+    Ripple,
+    Input, Select,
+    initTE,
+    } from "tw-elements";
 
-initTE({ Ripple, Input, Select });
-</script>
+    initTE({ Ripple, Input, Select });
+    </script>
+
 </body>
-
 </html>
