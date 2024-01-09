@@ -22,6 +22,7 @@ La app permite a l@s Responsables de formación:
 
 - HTML
 - CSS
+- Tailwind
 - PHP
 - MySQL
 
@@ -45,8 +46,8 @@ Seguir las siguientes instrucciones para crear una copia del proyecto y ejecutar
 
 - [Natalia Belzarova](https://github.com/nati-Bel)
 - [Beatriz Cano](https://github.com/BeatrizCano)
-- [Mireia Vazquez](https://github.com/AmaiaAbaroa)
-- [Liliana Gutiérrez](https://github.com/mireiavh)
+- [Mireia Vazquez](https://github.com/mireiavh)
+- [Liliana Gutiérrez](https://github.com/LilinaG)
 
 
 

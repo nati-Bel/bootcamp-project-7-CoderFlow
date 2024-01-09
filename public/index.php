@@ -17,7 +17,7 @@ $router = new RouterHandler;
 switch($resource){
 
     case '/':
-        require('../app/views/view_welcome_panel.php');
+        require('../app/views/view_coders_list.php');
         break;
     
     case "coders":      
